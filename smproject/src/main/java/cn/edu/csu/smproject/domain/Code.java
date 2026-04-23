@@ -1,10 +1,10 @@
 package cn.edu.csu.smproject.domain;
 
 public class Code {
-    private String fileName;
-    private int codeLines;
-    private int commentLines;
-    private int blankLines;
+    private String fileName; /**     * 文件名属性     */
+    private int codeLines; /**     * 代码行数属性     */
+    private int commentLines; /**     * 注释行数属性     */
+    private int blankLines; /**     * 空行数属性     */
 
     public String getFileName() {
         return fileName;

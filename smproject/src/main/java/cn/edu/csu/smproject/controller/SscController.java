@@ -5,16 +5,22 @@ import cn.edu.csu.smproject.Service.*;
 import cn.edu.csu.smproject.domain.*;
 import cn.edu.csu.smproject.domain.DF.*;
 import cn.edu.csu.smproject.domain.DF.Process;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin
 public class SscController {
+
+    @Autowired
+    private HistoryService historyService;
 
     @PostMapping(value = "/test", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
@@ -86,20 +92,18 @@ public class SscController {
 
     @PostMapping(value = "/CKMetrics", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
-    public CKResponse CKMetrics(@RequestBody UMLXML model){
+    public CKResponse CKMetrics(@RequestBody UMLXML model,
+                                @RequestParam(required = false) String projectName){
         CKUtil.statClassAndInterface(model);
         CKUtil.countOwnedOperations(model);
         CKUtil.computeDepth(model);
         CKUtil.computeCBO(model);
-        //统计每个类的属性
         CKUtil.statAttribute(model);
         CKUtil.computeRFC(model);
         CKUtil.computeLCOM(model);
 
         for(int i=0;i<model.getPackagedElements().size();i++){
-            //如果是我们的Class类型
             if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
-                //String id = model.getPackagedElements().get(i).getId();
                 System.out.println("对于类别："+model.getPackagedElements().get(i).getName()
                         +",wmc是："+model.getPackagedElements().get(i).getWmc()
                         +"，深度是："+ model.getPackagedElements().get(i).getDepth()
@@ -118,13 +122,10 @@ public class SscController {
             }
         }
 
-        //基本的功能我们已经实现了，接下来我们来设计一下如何返回我们的xml文件
         CKResponse ckResponse = new CKResponse();
         List<CKResult> ckResults = new ArrayList<CKResult>();
         for(int i=0;i<model.getPackagedElements().size();i++){
-            //如果是我们的Class类型
             if(model.getPackagedElements().get(i).getType().equals("uml:Class") || model.getPackagedElements().get(i).getType().equals("uml:Interface") ){
-                //String id = model.getPackagedElements().get(i).getId();
                 CKResult ckResult = new CKResult();
                 ckResult.setName(model.getPackagedElements().get(i).getName());
                 ckResult.setWmc(model.getPackagedElements().get(i).getWmc());
@@ -137,6 +138,17 @@ public class SscController {
             }
         }
         ckResponse.setCkResultList(ckResults);
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                Map<String, Object> data = new HashMap<>();
+                data.put("results", ckResults);
+                historyService.saveHistory(projectName, "CK", data);
+            }catch(Exception e){
+                System.err.println("Failed to save CK history: " + e.getMessage());
+            }
+        }
+
         return ckResponse;
     }
 
@@ -144,29 +156,18 @@ public class SscController {
 
     @PostMapping(value = "/LKMetrics", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
-    public LKResponse LKMetrics(@RequestBody UMLXML model){
-        //1. 存储映射<类名,类>,<接口名，接口>
+    public LKResponse LKMetrics(@RequestBody UMLXML model,
+                                @RequestParam(required = false) String projectName){
         LKUtil.statClassAndInterface(model);
-
-        //2. 记录一个类有多少直接的方法，即不包含父类的方法数
         LKUtil.countOwnedOperations(model);
-
-        //3. 记录一个类有多少直接的属性，即不包含父类的属性
         LKUtil.statAttribute(model);
-
-        //4. 进行深度优先搜索，得到CS
         LKUtil.countCS(model);
-
-        //5. 计算继承的深度
         LKUtil.computeDepth(model);
-
-        //6. 计算特征化指数
         LKUtil.computeSi(model);
 
         LKResponse lkResponse = new LKResponse();
         List<LKResult> lkResults = new ArrayList<LKResult>();
         for(int i=0;i<model.getPackagedElements().size();i++){
-            //如果是我们的Class类型
             if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
                 PackagedElement packagedElement = model.getPackagedElements().get(i);
                 LKResult lkResult = new LKResult();
@@ -180,49 +181,99 @@ public class SscController {
             }
         }
         lkResponse.setLkResultList(lkResults);
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                Map<String, Object> data = new HashMap<>();
+                data.put("results", lkResults);
+                historyService.saveHistory(projectName, "LK", data);
+            }catch(Exception e){
+                System.err.println("Failed to save LK history: " + e.getMessage());
+            }
+        }
+
         return lkResponse;
     }
 
     @PostMapping(value = "/VGMetrics", consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public int VGMetrics(@RequestBody UMLXML model){
+    public Map<String, Object> VGMetrics(@RequestBody UMLXML model,
+                                         @RequestParam(required = false) String projectName){
+        Map<String, Object> response = new HashMap<>();
         int vg = 0;
         VGUtil.computeVG(model);
         for(PackagedElement packagedElement : model.getPackagedElements()){
             System.out.println(packagedElement.getVg());
             vg = packagedElement.getVg();
         }
-        return vg;
+        response.put("vg", vg);
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                historyService.saveHistory(projectName, "VG", response);
+            }catch(Exception e){
+                System.err.println("Failed to save VG history: " + e.getMessage());
+            }
+        }
+
+        return response;
     }
 
     @PostMapping(value = "/countCode")
-    public ArrayList<Code> countCode(@RequestParam("files") MultipartFile[] files){
+    public Map<String, Object> countCode(@RequestParam("files") MultipartFile[] files,
+                                        @RequestParam(required = false) String projectName){
+        Map<String, Object> response = new HashMap<>();
         CodeCounterUtil codeCounterUtil = new CodeCounterUtil();
-        return codeCounterUtil.countCode(files);
+        ArrayList<Code> codes = codeCounterUtil.countCode(files);
+
+        response.put("data", codes);
+        response.put("count", codes.size());
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                historyService.saveHistory(projectName, "LOC", response);
+            }catch(Exception e){
+                System.err.println("Failed to save LOC history: " + e.getMessage());
+            }
+        }
+
+        return response;
     }
 
     @PostMapping(value = "/UCPMetrics", consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public UCPResponse UCPMetrics(@RequestBody UMLXML model){
+    public UCPResponse UCPMetrics(@RequestBody UMLXML model,
+                                  @RequestParam(required = false) String projectName){
         UCPResponse ucpResponse = new UCPResponse();
         ucpResponse.setActors(UCPUtil.statActor(model));
         ucpResponse.setUsecases(UCPUtil.statUseCase(model));
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                Map<String, Object> data = new HashMap<>();
+                data.put("actors", ucpResponse.getActors());
+                data.put("usecases", ucpResponse.getUsecases());
+                historyService.saveHistory(projectName, "UCP", data);
+            }catch(Exception e){
+                System.err.println("Failed to save UCP history: " + e.getMessage());
+            }
+        }
+
         return ucpResponse;
     }
 
     @PostMapping(value="/FPMetrics",consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public FPResponse FPMetrics(@RequestBody DFXML model){
+    public FPResponse FPMetrics(@RequestBody DFXML model,
+                                @RequestParam(required = false) String projectName){
         FPResponse fpResponse = new FPResponse();
 
-        //测试Process
         ArrayList<Process> processArrayList = model.getRootObject().getChildren().getModel().getProcessArrayList();
         for(Process process:processArrayList){
             System.out.println(process.getName());
         }
         fpResponse.setProcessArrayList(processArrayList);
 
-        //测试Flows
         ArrayList<Flow> flowArrayList = model.getRootObject().getChildren().getModel().getFlowArrayList();
         for(Flow flow:flowArrayList){
             if(flow.getObject1().getProcess()!=null){
@@ -231,19 +282,30 @@ public class SscController {
         }
         fpResponse.setFlowArrayList(flowArrayList);
 
-        //测试用户
         ArrayList<OrganizationUnit> organizationUnitArrayList = model.getRootObject().getChildren().getModel().getOrganizationUnitArrayList();
         for(OrganizationUnit organizationUnit:organizationUnitArrayList){
             System.out.println(organizationUnit.getName());
         }
         fpResponse.setOrganizationUnitArrayList(organizationUnitArrayList);
 
-        //测试数据存储
         ArrayList<Resource> resourceArrayList = model.getRootObject().getChildren().getModel().getResourceArrayList();
         for(Resource resource:resourceArrayList){
             System.out.println(resource.getName());
         }
         fpResponse.setResourceArrayList(resourceArrayList);
+
+        if(projectName != null && !projectName.isEmpty()){
+            try{
+                Map<String, Object> data = new HashMap<>();
+                data.put("processes", processArrayList);
+                data.put("flows", flowArrayList);
+                data.put("organizationUnits", organizationUnitArrayList);
+                data.put("resources", resourceArrayList);
+                historyService.saveHistory(projectName, "FP", data);
+            }catch(Exception e){
+                System.err.println("Failed to save FP history: " + e.getMessage());
+            }
+        }
 
         return fpResponse;
     }
