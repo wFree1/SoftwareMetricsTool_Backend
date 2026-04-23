@@ -19,7 +19,7 @@ import java.util.List;
 @Service
 public class HistoryService {
 
-    private static final String HISTORY_DIR = "src/history/";
+    private static final String HISTORY_DIR = "smproject/src/history/";
     private static final ObjectMapper objectMapper;
 
     static {
@@ -93,7 +93,7 @@ public class HistoryService {
         histories.add(history);
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(objectMapper.writeValueAsString(histories));
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(writer, histories);
         }
     }
         
