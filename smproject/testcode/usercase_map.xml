@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_kkgsMBeLEd60N8ipLbB6nA" name="在线教学系统用例图">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_DLlAEA_AEfCK5NcxktvetQ" name="学生"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_DMuPkA_AEfCK5NcxktvetQ" name="教师"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_DM4noA_AEfCK5NcxktvetQ" name="管理员"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_DPsEAA_AEfCK5NcxktvetQ" name="join_review" supplier="_DRy80A_AEfCK5NcxktvetQ" client="_DRmIgA_AEfCK5NcxktvetQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_DPw8gA_AEfCK5NcxktvetQ" name="Dependency_2" supplier="_DTvdkA_AEfCK5NcxktvetQ" client="_DTKOwA_AEfCK5NcxktvetQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DQYAgA_AEfCK5NcxktvetQ" name="回答课堂提问"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DRmIgA_AEfCK5NcxktvetQ" name="加入课程" clientDependency="_DPsEAA_AEfCK5NcxktvetQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DRy80A_AEfCK5NcxktvetQ" name="审核加入课程"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DR-jAA_AEfCK5NcxktvetQ" name="查找资源"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DSMlcA_AEfCK5NcxktvetQ" name="预览资源"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DSYLoA_AEfCK5NcxktvetQ" name="下载资源"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DSjx0A_AEfCK5NcxktvetQ" name="修改初始登录密码"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DSv_EA_AEfCK5NcxktvetQ" name="加入直播间"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DS8MUA_AEfCK5NcxktvetQ" name="创建课程"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DTKOwA_AEfCK5NcxktvetQ" name="发布学习资源" clientDependency="_DPw8gA_AEfCK5NcxktvetQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DTV08A_AEfCK5NcxktvetQ" name="发布课堂提问"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DTiCMA_AEfCK5NcxktvetQ" name="开展在线直播"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DTvdkA_AEfCK5NcxktvetQ" name="审核学习资源"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DT7q0A_AEfCK5NcxktvetQ" name="导入教师和学生列表"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DUjV4A_AEfCK5NcxktvetQ" name="Association_1" memberEnd="_DUmZMA_AEfCK5NcxktvetQ _DUymcA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DUmZMA_AEfCK5NcxktvetQ _DUymcA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DUmZMA_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DUjV4A_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DUymcA_AEfCK5NcxktvetQ" name="dst" type="_DQYAgA_AEfCK5NcxktvetQ" association="_DUjV4A_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DU1pwA_AEfCK5NcxktvetQ" name="Association_2" memberEnd="_DU2Q0A_AEfCK5NcxktvetQ _DU7JUA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DU2Q0A_AEfCK5NcxktvetQ _DU7JUA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DU2Q0A_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DU1pwA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DU7JUA_AEfCK5NcxktvetQ" name="dst" type="_DQYAgA_AEfCK5NcxktvetQ" association="_DU1pwA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DU8-gA_AEfCK5NcxktvetQ" name="Association_3" memberEnd="_DU8-gQ_AEfCK5NcxktvetQ _DVB3AA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DU8-gQ_AEfCK5NcxktvetQ _DVB3AA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DU8-gQ_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DU8-gA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVB3AA_AEfCK5NcxktvetQ" name="dst" type="_DRmIgA_AEfCK5NcxktvetQ" association="_DU8-gA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVFhYA_AEfCK5NcxktvetQ" name="Association_4" memberEnd="_DVGIcA_AEfCK5NcxktvetQ _DVKZ4A_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVGIcA_AEfCK5NcxktvetQ _DVKZ4A_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVGIcA_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DVFhYA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVKZ4A_AEfCK5NcxktvetQ" name="dst" type="_DR-jAA_AEfCK5NcxktvetQ" association="_DVFhYA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVLoAA_AEfCK5NcxktvetQ" name="Association_5" memberEnd="_DVLoAQ_AEfCK5NcxktvetQ _DVQggA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVLoAQ_AEfCK5NcxktvetQ _DVQggA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVLoAQ_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DVLoAA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVQggA_AEfCK5NcxktvetQ" name="dst" type="_DSMlcA_AEfCK5NcxktvetQ" association="_DVLoAA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVRuoA_AEfCK5NcxktvetQ" name="Association_6" memberEnd="_DVSVsA_AEfCK5NcxktvetQ _DVZDYA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVSVsA_AEfCK5NcxktvetQ _DVZDYA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVSVsA_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DVRuoA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVZDYA_AEfCK5NcxktvetQ" name="dst" type="_DSYLoA_AEfCK5NcxktvetQ" association="_DVRuoA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVaRgA_AEfCK5NcxktvetQ" name="Association_7" memberEnd="_DVaRgQ_AEfCK5NcxktvetQ _DVei8A_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVaRgQ_AEfCK5NcxktvetQ _DVei8A_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVaRgQ_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DVaRgA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVei8A_AEfCK5NcxktvetQ" name="dst" type="_DSjx0A_AEfCK5NcxktvetQ" association="_DVaRgA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVhmQA_AEfCK5NcxktvetQ" name="Association_8" memberEnd="_DViNUA_AEfCK5NcxktvetQ _DVmewA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DViNUA_AEfCK5NcxktvetQ _DVmewA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DViNUA_AEfCK5NcxktvetQ" name="src" type="_DLlAEA_AEfCK5NcxktvetQ" association="_DVhmQA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVmewA_AEfCK5NcxktvetQ" name="dst" type="_DSv_EA_AEfCK5NcxktvetQ" association="_DVhmQA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVns4A_AEfCK5NcxktvetQ" name="Association_9" memberEnd="_DVoT8A_AEfCK5NcxktvetQ _DVslYA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVoT8A_AEfCK5NcxktvetQ _DVslYA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVoT8A_AEfCK5NcxktvetQ" name="src" type="_DMuPkA_AEfCK5NcxktvetQ" association="_DVns4A_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVslYA_AEfCK5NcxktvetQ" name="dst" type="_DSjx0A_AEfCK5NcxktvetQ" association="_DVns4A_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DVuakA_AEfCK5NcxktvetQ" name="Association_10" memberEnd="_DVuakQ_AEfCK5NcxktvetQ _DVzTEA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DVuakQ_AEfCK5NcxktvetQ _DVzTEA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DVuakQ_AEfCK5NcxktvetQ" name="src" type="_DS8MUA_AEfCK5NcxktvetQ" association="_DVuakA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DVzTEA_AEfCK5NcxktvetQ" name="dst" type="_DMuPkA_AEfCK5NcxktvetQ" association="_DVuakA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DV2WYA_AEfCK5NcxktvetQ" name="Association_11" memberEnd="_DV29cA_AEfCK5NcxktvetQ _DV7O4A_AEfCK5NcxktvetQ" navigableOwnedEnd="_DV29cA_AEfCK5NcxktvetQ _DV7O4A_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DV29cA_AEfCK5NcxktvetQ" name="src" type="_DTvdkA_AEfCK5NcxktvetQ" association="_DV2WYA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DV7O4A_AEfCK5NcxktvetQ" name="dst" type="_DM4noA_AEfCK5NcxktvetQ" association="_DV2WYA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DV9EEA_AEfCK5NcxktvetQ" name="Association_12" memberEnd="_DV9EEQ_AEfCK5NcxktvetQ _DWBVgA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DV9EEQ_AEfCK5NcxktvetQ _DWBVgA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DV9EEQ_AEfCK5NcxktvetQ" name="src" type="_DT7q0A_AEfCK5NcxktvetQ" association="_DV9EEA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DWBVgA_AEfCK5NcxktvetQ" name="dst" type="_DM4noA_AEfCK5NcxktvetQ" association="_DV9EEA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DWDKsA_AEfCK5NcxktvetQ" name="Association_13" memberEnd="_DWDKsQ_AEfCK5NcxktvetQ _DWIDMA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DWDKsQ_AEfCK5NcxktvetQ _DWIDMA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DWDKsQ_AEfCK5NcxktvetQ" name="src" type="_DTV08A_AEfCK5NcxktvetQ" association="_DWDKsA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DWIDMA_AEfCK5NcxktvetQ" name="dst" type="_DMuPkA_AEfCK5NcxktvetQ" association="_DWDKsA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DWJRUA_AEfCK5NcxktvetQ" name="Association_14" memberEnd="_DWJRUQ_AEfCK5NcxktvetQ _DWOJ0A_AEfCK5NcxktvetQ" navigableOwnedEnd="_DWJRUQ_AEfCK5NcxktvetQ _DWOJ0A_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DWJRUQ_AEfCK5NcxktvetQ" name="src" type="_DTiCMA_AEfCK5NcxktvetQ" association="_DWJRUA_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DWOJ0A_AEfCK5NcxktvetQ" name="dst" type="_DMuPkA_AEfCK5NcxktvetQ" association="_DWJRUA_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DWPX8A_AEfCK5NcxktvetQ" name="Association_15" memberEnd="_DWPX8Q_AEfCK5NcxktvetQ _DWTpYA_AEfCK5NcxktvetQ" navigableOwnedEnd="_DWPX8Q_AEfCK5NcxktvetQ _DWTpYA_AEfCK5NcxktvetQ">
+    <ownedEnd xmi:id="_DWPX8Q_AEfCK5NcxktvetQ" name="src" type="_DTKOwA_AEfCK5NcxktvetQ" association="_DWPX8A_AEfCK5NcxktvetQ"/>
+    <ownedEnd xmi:id="_DWTpYA_AEfCK5NcxktvetQ" name="dst" type="_DMuPkA_AEfCK5NcxktvetQ" association="_DWPX8A_AEfCK5NcxktvetQ"/>
+  </packagedElement>
+</uml:Model>
