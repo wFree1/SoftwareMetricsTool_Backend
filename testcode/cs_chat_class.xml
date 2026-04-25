@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_kkgsMBeLEd60N8ipLbB6nA" name="CS聊天系统类图">
+  <packagedElement xmi:type="uml:Association" xmi:id="_0-0GwA-8EfCFU6G-t3XhIA" name="association1" memberEnd="_0_A7EA-8EfCFU6G-t3XhIA _1BKQIQ-8EfCFU6G-t3XhIA" navigableOwnedEnd="_1BKQIQ-8EfCFU6G-t3XhIA">
+    <ownedEnd xmi:id="_0_A7EA-8EfCFU6G-t3XhIA" name="" visibility="public" type="_1DADMA-8EfCFU6G-t3XhIA" association="_0-0GwA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1BKQIA-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1BJCAA-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1BKQIQ-8EfCFU6G-t3XhIA" name="userService" visibility="private" type="_1ZAIYA-8EfCFU6G-t3XhIA" association="_0-0GwA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1BYSkQ-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1BYSkA-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1Bau0A-8EfCFU6G-t3XhIA" name="association2" memberEnd="_1BbV4A-8EfCFU6G-t3XhIA _1BhcgA-8EfCFU6G-t3XhIA" navigableOwnedEnd="_1BhcgA-8EfCFU6G-t3XhIA">
+    <ownedEnd xmi:id="_1BbV4A-8EfCFU6G-t3XhIA" name="" visibility="public" type="_1KEUgA-8EfCFU6G-t3XhIA" association="_1Bau0A-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1BdLEQ-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1BdLEA-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1BhcgA-8EfCFU6G-t3XhIA" name="userService" visibility="private" type="_1ZAIYA-8EfCFU6G-t3XhIA" association="_1Bau0A-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Bhcgg-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1BhcgQ-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1Bj4wA-8EfCFU6G-t3XhIA" name="association3" memberEnd="_1Bj4wQ-8EfCFU6G-t3XhIA _1BtCsA-8EfCFU6G-t3XhIA" navigableOwnedEnd="_1BtCsA-8EfCFU6G-t3XhIA">
+    <ownedEnd xmi:id="_1Bj4wQ-8EfCFU6G-t3XhIA" name="" visibility="public" type="_1ThygA-8EfCFU6G-t3XhIA" association="_1Bj4wA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Bj4ww-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Bj4wg-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1BtCsA-8EfCFU6G-t3XhIA" name="userDAO" visibility="private" type="_1VeTQA-8EfCFU6G-t3XhIA" association="_1Bj4wA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1Bu34Q-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Bu34A-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1BwGAA-8EfCFU6G-t3XhIA" name="association4" memberEnd="_1BwGAQ-8EfCFU6G-t3XhIA _1B0XcA-8EfCFU6G-t3XhIA" navigableOwnedEnd="_1B0XcA-8EfCFU6G-t3XhIA">
+    <ownedEnd xmi:id="_1BwGAQ-8EfCFU6G-t3XhIA" name="" visibility="public" type="_1ZAIYA-8EfCFU6G-t3XhIA" association="_1BwGAA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1BwtEQ-8EfCFU6G-t3XhIA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1BwtEA-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_1B0XcA-8EfCFU6G-t3XhIA" name="" visibility="public" type="_1QjXAA-8EfCFU6G-t3XhIA" association="_1BwGAA-8EfCFU6G-t3XhIA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1B1lkQ-8EfCFU6G-t3XhIA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1B1lkA-8EfCFU6G-t3XhIA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1DADMA-8EfCFU6G-t3XhIA" name="LoginForm">
+    <ownedAttribute xmi:id="_1IKQAA-8EfCFU6G-t3XhIA" name="userService" visibility="private" type="_1ZAIYA-8EfCFU6G-t3XhIA"/>
+    <ownedOperation xmi:id="_1IoxIA-8EfCFU6G-t3XhIA" name="LoginForm" visibility="public" bodyCondition="_1IwF4A-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1JfswA-8EfCFU6G-t3XhIA">
+        <body> 构造方法注入UserService</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1IwF4A-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1I3aoA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userService = userService;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1JRqUA-8EfCFU6G-t3XhIA" name="userService" type="_1ZAIYA-8EfCFU6G-t3XhIA" direction="inout"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1Jg64A-8EfCFU6G-t3XhIA" name="login" visibility="public" bodyCondition="_1JlzYA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1J8_wA-8EfCFU6G-t3XhIA">
+        <body> 执行登录操作</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1JlzYA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1JmacA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return userService.loginUser(userId, password);&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1JtvMA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1JwLcQ-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1J7xoA-8EfCFU6G-t3XhIA" name="login" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1JwLcA-8EfCFU6G-t3XhIA" name="String"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1KEUgA-8EfCFU6G-t3XhIA" name="RegisterForm">
+    <ownedAttribute xmi:id="_1KQhwA-8EfCFU6G-t3XhIA" name="userService" visibility="private" type="_1ZAIYA-8EfCFU6G-t3XhIA"/>
+    <ownedOperation xmi:id="_1KfLQA-8EfCFU6G-t3XhIA" name="RegisterForm" visibility="public" bodyCondition="_1KjcsA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1Kjcsw-8EfCFU6G-t3XhIA">
+        <body> 构造方法注入UserService</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1KjcsA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1KjcsQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userService = userService;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1Kjcsg-8EfCFU6G-t3XhIA" name="userService" type="_1ZAIYA-8EfCFU6G-t3XhIA" direction="inout"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1KjctA-8EfCFU6G-t3XhIA" name="register" visibility="public" bodyCondition="_1Kub0A-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1LMV4g-8EfCFU6G-t3XhIA">
+        <body> 执行注册操作</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1Kub0A-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1Kub0Q-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    UserDTO userDTO = new UserDTO();&#xD;&#xA;    userDTO.setUserId(userId);&#xD;&#xA;    userDTO.setPassword(password);&#xD;&#xA;    userDTO.setUserName(userName);&#xD;&#xA;    userDTO.setGender(gender);&#xD;&#xA;    userDTO.setAge(age);&#xD;&#xA;    userDTO.setPhone(phone);&#xD;&#xA;    userDTO.setEmail(email);&#xD;&#xA;&#xD;&#xA;    return userService.registerUser(userDTO);&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1K7QIA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1K8eQA-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1K9sYA-8EfCFU6G-t3XhIA" name="userName" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1LDzAA-8EfCFU6G-t3XhIA" name="gender" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1LG2UA-8EfCFU6G-t3XhIA" name="age" type="_1LJSkA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1LLHwA-8EfCFU6G-t3XhIA" name="phone" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1LMV4A-8EfCFU6G-t3XhIA" name="email" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1LMV4Q-8EfCFU6G-t3XhIA" name="register" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1LJSkA-8EfCFU6G-t3XhIA" name="int"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1LcNgA-8EfCFU6G-t3XhIA" name="User">
+    <ownedAttribute xmi:id="_1L0A8A-8EfCFU6G-t3XhIA" name="userId" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1L_AEA-8EfCFU6G-t3XhIA" name="userName" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1MDRgA-8EfCFU6G-t3XhIA" name="password" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1MIxEA-8EfCFU6G-t3XhIA" name="gender" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1MMbcA-8EfCFU6G-t3XhIA" name="age" visibility="private" type="_1LJSkA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1MPewA-8EfCFU6G-t3XhIA" name="phone" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1MSiEA-8EfCFU6G-t3XhIA" name="email" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedOperation xmi:id="_1M5mEA-8EfCFU6G-t3XhIA" name="getUserId" visibility="public" bodyCondition="_1M9QcA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1M9Qcw-8EfCFU6G-t3XhIA">
+        <body> Getters and Setters</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1M9QcA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1M9QcQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return userId;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1M9Qcg-8EfCFU6G-t3XhIA" name="getUserId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1M9QdA-8EfCFU6G-t3XhIA" name="setUserId" visibility="public" bodyCondition="_1NIPkA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1NIPkA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1NIPkQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userId = userId;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1NLS4A-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1NNIEA-8EfCFU6G-t3XhIA" name="setUserId" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1NPkUA-8EfCFU6G-t3XhIA" name="getUserName" visibility="public" bodyCondition="_1NPkUQ-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1NPkUQ-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1NPkUg-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return userName;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1NPkUw-8EfCFU6G-t3XhIA" name="getUserName" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1NPkVA-8EfCFU6G-t3XhIA" name="setUserName" visibility="public" bodyCondition="_1NbxkA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1NbxkA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1NcYoA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userName = userName;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1NgqEA-8EfCFU6G-t3XhIA" name="userName" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1NjtYA-8EfCFU6G-t3XhIA" name="setUserName" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1NjtYQ-8EfCFU6G-t3XhIA" name="getPassword" visibility="public" bodyCondition="_1NjtYg-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1NjtYg-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1NjtYw-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return password;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1NvTkA-8EfCFU6G-t3XhIA" name="getPassword" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1NwhsA-8EfCFU6G-t3XhIA" name="setPassword" visibility="public" bodyCondition="_1NzlAA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1NzlAA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1N0MEA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.password = password;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1N32cA-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1N65wA-8EfCFU6G-t3XhIA" name="setPassword" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1N8H4A-8EfCFU6G-t3XhIA" name="getGender" visibility="public" bodyCondition="_1OAZUA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OAZUA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1OAZUQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return gender;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1OC1kA-8EfCFU6G-t3XhIA" name="getGender" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1OC1kQ-8EfCFU6G-t3XhIA" name="setGender" visibility="public" bodyCondition="_1OC1kg-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OC1kg-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1OC1kw-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.gender = gender;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1OPC0A-8EfCFU6G-t3XhIA" name="gender" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1OQ4AA-8EfCFU6G-t3XhIA" name="setGender" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1ORfEA-8EfCFU6G-t3XhIA" name="getAge" visibility="public" bodyCondition="_1OWXkA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OWXkA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1OW-oA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return age;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1OYMwA-8EfCFU6G-t3XhIA" name="getAge" type="_1LJSkA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1OZa4A-8EfCFU6G-t3XhIA" name="setAge" visibility="public" bodyCondition="_1OceMA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OceMA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1OdFQA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.age = age;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1Oik0A-8EfCFU6G-t3XhIA" name="age" type="_1LJSkA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Ojy8A-8EfCFU6G-t3XhIA" name="setAge" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1OlBEA-8EfCFU6G-t3XhIA" name="getPhone" visibility="public" bodyCondition="_1OorcA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OorcA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1OorcQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return phone;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1Os84A-8EfCFU6G-t3XhIA" name="getPhone" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1OuLAA-8EfCFU6G-t3XhIA" name="setPhone" visibility="public" bodyCondition="_1OxOUA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1OxOUA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1Ox1YA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.phone = phone;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1O2G0A-8EfCFU6G-t3XhIA" name="phone" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1O3U8A-8EfCFU6G-t3XhIA" name="setPhone" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1O4jEA-8EfCFU6G-t3XhIA" name="getEmail" visibility="public" bodyCondition="_1O7mYA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1O7mYA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1O8NcA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return email;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1O-psA-8EfCFU6G-t3XhIA" name="getEmail" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1O_QwA-8EfCFU6G-t3XhIA" name="setEmail" visibility="public" bodyCondition="_1PC7IA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1PC7IA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1PC7IQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.email = email;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1PGlgA-8EfCFU6G-t3XhIA" name="email" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1PKP4A-8EfCFU6G-t3XhIA" name="setEmail" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1NNvIA-8EfCFU6G-t3XhIA" name="void"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1PQWgA-8EfCFU6G-t3XhIA" name="UserDAOImpl" clientDependency="_1Z8jkA-8EfCFU6G-t3XhIA">
+    <ownedAttribute xmi:id="_1PeY8A-8EfCFU6G-t3XhIA" name="database" visibility="private" type="_1PfnEA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1PiqYA-8EfCFU6G-t3XhIA">
+        <body> 模拟数据库</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_1PzJEA-8EfCFU6G-t3XhIA" name="saveUser" visibility="public" bodyCondition="_1P2zcA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1P2zcA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1P2zcQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    database.put(userDTO.getUserId(), userDTO);&#xD;&#xA;    System.out.println(&quot;User saved: &quot; + userDTO.getUserId());&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1P6d0A-8EfCFU6G-t3XhIA" name="userDTO" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1P8TAA-8EfCFU6G-t3XhIA" name="saveUser" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1QBLgA-8EfCFU6G-t3XhIA" name="getUser" visibility="public" bodyCondition="_1QE14A-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1QE14A-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1QE14Q-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return database.get(userId);&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1QKVcA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1QMKoA-8EfCFU6G-t3XhIA" name="getUser" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1QPN8A-8EfCFU6G-t3XhIA" name="exists" visibility="public" bodyCondition="_1QVUkA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1QVUkA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1QVUkQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return database.containsKey(userId);&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1QYX4A-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1QcCQA-8EfCFU6G-t3XhIA" name="exists" type="_1QcpUA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1PfnEA-8EfCFU6G-t3XhIA" name="Map&lt;String, UserDTO>"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_1QcpUA-8EfCFU6G-t3XhIA" name="boolean"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1QjXAA-8EfCFU6G-t3XhIA" name="UserDTO">
+    <ownedAttribute xmi:id="_1Q7xgA-8EfCFU6G-t3XhIA" name="userId" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1Q8YkA-8EfCFU6G-t3XhIA" name="userName" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1Q8YkQ-8EfCFU6G-t3XhIA" name="password" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1Q8Ykg-8EfCFU6G-t3XhIA" name="gender" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1RDtUA-8EfCFU6G-t3XhIA" name="age" visibility="private" type="_1LJSkA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1RDtUQ-8EfCFU6G-t3XhIA" name="phone" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedAttribute xmi:id="_1RDtUg-8EfCFU6G-t3XhIA" name="email" visibility="private" type="_1JwLcA-8EfCFU6G-t3XhIA"/>
+    <ownedOperation xmi:id="_1Rw38A-8EfCFU6G-t3XhIA" name="getUserId" visibility="public" bodyCondition="_1RyGEA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1R3loA-8EfCFU6G-t3XhIA">
+        <body> Getters and Setters</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1RyGEA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1RzUMA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return userId;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1R2-kA-8EfCFU6G-t3XhIA" name="getUserId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1R4MsA-8EfCFU6G-t3XhIA" name="setUserId" visibility="public" bodyCondition="_1R6B4A-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1R6B4A-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1R6B4Q-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userId = userId;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1R9FMA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1R-6YA-8EfCFU6G-t3XhIA" name="setUserId" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1SAvkA-8EfCFU6G-t3XhIA" name="getUserName" visibility="public" bodyCondition="_1SAvkQ-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SAvkQ-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SAvkg-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return userName;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SAvkw-8EfCFU6G-t3XhIA" name="getUserName" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1SAvlA-8EfCFU6G-t3XhIA" name="setUserName" visibility="public" bodyCondition="_1SAvlQ-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SAvlQ-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SAvlg-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userName = userName;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SM80A-8EfCFU6G-t3XhIA" name="userName" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1SPZEA-8EfCFU6G-t3XhIA" name="setUserName" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1SQnMA-8EfCFU6G-t3XhIA" name="getPassword" visibility="public" bodyCondition="_1SScYA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SScYA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SScYQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return password;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SU4oA-8EfCFU6G-t3XhIA" name="getPassword" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1SU4oQ-8EfCFU6G-t3XhIA" name="setPassword" visibility="public" bodyCondition="_1SU4og-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SU4og-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SU4ow-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.password = password;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SU4pA-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Sf3wA-8EfCFU6G-t3XhIA" name="setPassword" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1ShF4A-8EfCFU6G-t3XhIA" name="getGender" visibility="public" bodyCondition="_1SiUAA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SiUAA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1Si7EA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return gender;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SkwQA-8EfCFU6G-t3XhIA" name="getGender" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1Sl-YA-8EfCFU6G-t3XhIA" name="setGender" visibility="public" bodyCondition="_1SnMgA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SnMgA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SnMgQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.gender = gender;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1SpBsA-8EfCFU6G-t3XhIA" name="gender" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1SpBsQ-8EfCFU6G-t3XhIA" name="setGender" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1SpBsg-8EfCFU6G-t3XhIA" name="getAge" visibility="public" bodyCondition="_1SpBsw-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1SpBsw-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1SpBtA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return age;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1S0n4A-8EfCFU6G-t3XhIA" name="getAge" type="_1LJSkA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1S12AA-8EfCFU6G-t3XhIA" name="setAge" visibility="public" bodyCondition="_1S3EIA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1S3EIA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1S3EIQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.age = age;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1S6ugA-8EfCFU6G-t3XhIA" name="age" type="_1LJSkA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1S8jsA-8EfCFU6G-t3XhIA" name="setAge" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1S-Y4A-8EfCFU6G-t3XhIA" name="getPhone" visibility="public" bodyCondition="_1S-Y4Q-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1S-Y4Q-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1S-Y4g-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return phone;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1S-Y4w-8EfCFU6G-t3XhIA" name="getPhone" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1S-Y5A-8EfCFU6G-t3XhIA" name="setPhone" visibility="public" bodyCondition="_1S-Y5Q-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1S-Y5Q-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1S-Y5g-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.phone = phone;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1TKmIA-8EfCFU6G-t3XhIA" name="phone" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1TL0QA-8EfCFU6G-t3XhIA" name="setPhone" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1TNCYA-8EfCFU6G-t3XhIA" name="getEmail" visibility="public" bodyCondition="_1TOQgA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1TOQgA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1TO3kA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    return email;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1TQFsA-8EfCFU6G-t3XhIA" name="getEmail" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1TR64A-8EfCFU6G-t3XhIA" name="setEmail" visibility="public" bodyCondition="_1TR64Q-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1TR64Q-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1TR64g-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.email = email;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1TR64w-8EfCFU6G-t3XhIA" name="email" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1TR65A-8EfCFU6G-t3XhIA" name="setEmail" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1ThygA-8EfCFU6G-t3XhIA" name="UserServiceImpl" clientDependency="_1Z8jkg-8EfCFU6G-t3XhIA">
+    <ownedAttribute xmi:id="_1Tv08A-8EfCFU6G-t3XhIA" name="userDAO" visibility="private" type="_1VeTQA-8EfCFU6G-t3XhIA"/>
+    <ownedOperation xmi:id="_1UCI0A-8EfCFU6G-t3XhIA" name="UserServiceImpl" visibility="public" bodyCondition="_1UGaQA-8EfCFU6G-t3XhIA">
+      <ownedComment xmi:id="_1UQyUA-8EfCFU6G-t3XhIA">
+        <body> 构造方法注入DAO</body>
+      </ownedComment>
+      <ownedRule xmi:id="_1UGaQA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1UIPcA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    this.userDAO = userDAO;&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1UL50A-8EfCFU6G-t3XhIA" name="userDAO" type="_1VeTQA-8EfCFU6G-t3XhIA" direction="inout"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1URZYA-8EfCFU6G-t3XhIA" name="registerUser" visibility="public" bodyCondition="_1UVDwA-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1UVDwA-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1UVDwQ-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    if (userDAO.exists(userDTO.getUserId())) {&#xD;&#xA;        return &quot;账号已存在&quot;;&#xD;&#xA;    } else {&#xD;&#xA;        userDAO.saveUser(userDTO);&#xD;&#xA;        return &quot;注册成功&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1UZ8QA-8EfCFU6G-t3XhIA" name="userDTO" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1UZ8QQ-8EfCFU6G-t3XhIA" name="registerUser" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1UZ8Qg-8EfCFU6G-t3XhIA" name="loginUser" visibility="public" bodyCondition="_1UZ8Qw-8EfCFU6G-t3XhIA">
+      <ownedRule xmi:id="_1UZ8Qw-8EfCFU6G-t3XhIA">
+        <specification xmi:type="uml:LiteralString" xmi:id="_1UZ8RA-8EfCFU6G-t3XhIA" name="TemplateBody" value="{&#xD;&#xA;    UserDTO userDTO = userDAO.getUser(userId);&#xD;&#xA;    if (userDTO == null) {&#xD;&#xA;        return &quot;用户不存在&quot;;&#xD;&#xA;    }&#xD;&#xA;    if (userDTO.getPassword().equals(password)) {&#xD;&#xA;        return &quot;登录成功&quot;;&#xD;&#xA;    } else {&#xD;&#xA;        return &quot;密码错误&quot;;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;"/>
+      </ownedRule>
+      <ownedParameter xmi:id="_1UpM0A-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Us3MA-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1UusYA-8EfCFU6G-t3XhIA" name="loginUser" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_1VJjIA-8EfCFU6G-t3XhIA" name="Dependency_1" supplier="_1QjXAA-8EfCFU6G-t3XhIA" client="_1VeTQA-8EfCFU6G-t3XhIA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_1VeTQA-8EfCFU6G-t3XhIA" name="UserDAO" clientDependency="_1VJjIA-8EfCFU6G-t3XhIA">
+    <ownedOperation xmi:id="_1YOFQA-8EfCFU6G-t3XhIA" name="saveUser" visibility="public" isAbstract="true">
+      <ownedComment xmi:id="_1YhnQg-8EfCFU6G-t3XhIA">
+        <body> 保存用户</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_1YhnQA-8EfCFU6G-t3XhIA" name="userDTO" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1YhnQQ-8EfCFU6G-t3XhIA" name="saveUser" type="_1NNvIA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1YhnQw-8EfCFU6G-t3XhIA" name="getUser" visibility="public" isAbstract="true">
+      <ownedComment xmi:id="_1YzUEA-8EfCFU6G-t3XhIA">
+        <body> 获取用户</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_1YubkA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Yw30A-8EfCFU6G-t3XhIA" name="getUser" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1Y1JQA-8EfCFU6G-t3XhIA" name="exists" visibility="public" isAbstract="true">
+      <ownedComment xmi:id="_1Y8eAA-8EfCFU6G-t3XhIA">
+        <body> 判断用户是否存在</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_1Y6BwA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Y7P4A-8EfCFU6G-t3XhIA" name="exists" type="_1QcpUA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_1ZAIYA-8EfCFU6G-t3XhIA" name="UserService">
+    <ownedOperation xmi:id="_1ZURcA-8EfCFU6G-t3XhIA" name="registerUser" visibility="public" isAbstract="true">
+      <ownedParameter xmi:id="_1ZURcQ-8EfCFU6G-t3XhIA" name="userDTO" type="_1QjXAA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Zhs0A-8EfCFU6G-t3XhIA" name="registerUser" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_1Zi68A-8EfCFU6G-t3XhIA" name="loginUser" visibility="public" isAbstract="true">
+      <ownedParameter xmi:id="_1ZpooA-8EfCFU6G-t3XhIA" name="userId" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1ZpooQ-8EfCFU6G-t3XhIA" name="password" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="inout"/>
+      <ownedParameter xmi:id="_1Zpoog-8EfCFU6G-t3XhIA" name="loginUser" type="_1JwLcA-8EfCFU6G-t3XhIA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1Z8jkA-8EfCFU6G-t3XhIA" name="UserDAOImpl_implements_UserDAO" supplier="_1VeTQA-8EfCFU6G-t3XhIA" client="_1PQWgA-8EfCFU6G-t3XhIA">
+    <ownedComment xmi:id="_1Z8jkQ-8EfCFU6G-t3XhIA">
+      <body>UserDAOImpl implements UserDAO</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_1Z8jkg-8EfCFU6G-t3XhIA" name="UserServiceImpl_implements_UserService" supplier="_1ZAIYA-8EfCFU6G-t3XhIA" client="_1ThygA-8EfCFU6G-t3XhIA">
+    <ownedComment xmi:id="_1Z8jkw-8EfCFU6G-t3XhIA">
+      <body>UserServiceImpl implements UserService</body>
+    </ownedComment>
+  </packagedElement>
+</uml:Model>
