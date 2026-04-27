@@ -84,4 +84,60 @@ public class MetricExtensionController {
             return ResponseEntity.status(500).body(response);
         }
     }
+
+    // 【新增】：专门用来安全接收前端 JSON 数据的实体类
+    public static class RefactorReq {
+        private String code;
+        private String issueType;
+
+        public String getCode() { return code; }
+        public void setCode(String code) { this.code = code; }
+        public String getIssueType() { return issueType; }
+        public void setIssueType(String issueType) { this.issueType = issueType; }
+    }
+
+    /**
+     * AI 自动重构接口
+     */
+    @PostMapping("/ai/refactor")
+    public ResponseEntity<Map<String, Object>> refactorCode(@RequestBody RefactorReq request) {
+        Map<String, Object> response = new HashMap<>();
+        // 使用 get 方法获取数据，告别 Map 解析崩溃的风险
+        String badCode = request.getCode();
+        String issueType = request.getIssueType();
+
+        if (badCode == null || badCode.trim().isEmpty()) {
+            response.put("code", 400);
+            response.put("message", "代码不能为空");
+            return ResponseEntity.badRequest().body(response);
+        }
+
+        try {
+            // 调用 Service 中新增的方法
+            String refactoredCode = aiAnalysisService.refactorCode(badCode, issueType);
+
+            response.put("code", 200);
+            response.put("message", "success");
+
+            // 容错处理：去除 Markdown 标记
+            if (refactoredCode.startsWith("```java")) {
+                refactoredCode = refactoredCode.replaceFirst("```java\n?", "");
+            } else if (refactoredCode.startsWith("```")) {
+                refactoredCode = refactoredCode.replaceFirst("```\n?", "");
+            }
+            if (refactoredCode.endsWith("```")) {
+                refactoredCode = refactoredCode.substring(0, refactoredCode.lastIndexOf("```"));
+            }
+
+            response.put("data", refactoredCode.trim());
+
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            e.printStackTrace(); // 如果 AI 接口崩了，这里一定会打印红字
+            response.put("code", 500);
+            response.put("message", "AI 核心服务调用失败：" + e.getMessage());
+            return ResponseEntity.status(500).body(response);
+        }
+    }
 }

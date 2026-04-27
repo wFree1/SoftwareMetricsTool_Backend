@@ -78,4 +78,20 @@ public class AiAnalysisService {
             return "调用 AI 接口异常: " + e.getMessage();
         }
     }
+
+    public String refactorCode(String badCode, String issueType) {
+        // 构造重构专用的 System Prompt
+        String systemPrompt = "你是一个顶级的 Java 软件架构师。请根据《重构：改善既有代码的设计》和 SOLID 原则，" +
+                "对用户提供的存在【" + issueType + "】问题的代码进行重构。\n" +
+                "要求：\n" +
+                "1. 提取公共方法，降低圈复杂度。\n" +
+                "2. 消除魔法数字，规范命名。\n" +
+                "3. 【绝对严格】：只输出重构后的 Java 代码，不要任何解释，不要输出 ```java 这种 Markdown 标记，直接输出纯代码文本！！！";
+
+        // 构造 User Prompt
+        String userPrompt = "【需要重构的代码如下】：\n" + badCode;
+
+        // 复用你写好的底层 HTTP 调用方法
+        return callLlmApi(systemPrompt, userPrompt);
+    }
 }

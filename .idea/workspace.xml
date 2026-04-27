@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd62ef47-c658-4f7a-9b50-0496bbc41c47" name="Changes" comment="cocomo&amp;flowGraph">
-      <change afterPath="$PROJECT_DIR$/.idea/ApifoxUploaderProjectSetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/ai/AiRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" afterDir="false" />
+    <list default="true" id="cd62ef47-c658-4f7a-9b50-0496bbc41c47" name="Changes" comment="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CKUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CKUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CKUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CKUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/AiAnalysisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/AiAnalysisService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +91,7 @@
       <workItem from="1776245214831" duration="67000" />
       <workItem from="1777110673314" duration="1401000" />
       <workItem from="1777181913140" duration="7183000" />
+      <workItem from="1777269834317" duration="3092000" />
     </task>
     <task id="LOCAL-00001" summary="cocomo&amp;flowGraph">
       <option name="closed" value="true" />
@@ -114,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777111051959</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection">
+      <option name="closed" value="true" />
+      <created>1777269900742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777269900742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cocomo&amp;flowGraph" />
-    <option name="LAST_COMMIT_MESSAGE" value="cocomo&amp;flowGraph" />
+    <MESSAGE value="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection" />
+    <option name="LAST_COMMIT_MESSAGE" value="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection" />
   </component>
 </project>
