@@ -5,125 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd62ef47-c658-4f7a-9b50-0496bbc41c47" name="Changes" comment="cocomo&amp;flowGraph">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/SmprojectApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/CodeCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/HistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/SscController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/CKResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/CKResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/CocomoMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/CocomoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/CocomoResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/Code.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Children.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/DFXML.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/FPResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Flow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Object1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Object2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/OrganizationUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Process.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/DF/RootObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/FlowGraphResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/Generalization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/History.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/LKResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/LKResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OwnedAttribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OwnedEnd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OwnedOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/OwnedRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/PackagedElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/Specification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/TicketRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/TicketResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/UCPResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/UMLXML.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CKUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CocomoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CodeCounterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/FlowGraphService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/HistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/LKUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/UCPUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/VGUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/csu/smproject/SmprojectApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/SmprojectApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/CodeCounter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/HistoryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/SscController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/CKResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/CKResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/CocomoMode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/CocomoRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/CocomoResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/Code.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Children.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/DFXML.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/FPResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Flow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Model.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Object1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Object2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/OrganizationUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Process.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/Resource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/DF/RootObject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/FlowGraphResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/Generalization.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/History.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/LKResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/LKResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OrderRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OrderResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OwnedAttribute.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OwnedEnd.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OwnedOperation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/OwnedRule.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/PackagedElement.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/Specification.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/TicketRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/TicketResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/UCPResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/domain/UMLXML.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CKUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CocomoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CodeCounterUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/FlowGraphService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/HistoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/LKUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/UCPUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/VGUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/cn/edu/csu/smproject/SmprojectApplicationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/bid_activity.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/cs_chat_class.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/example.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/function_point.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcode/usercase_map.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ApifoxUploaderProjectSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/domain/ai/AiRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CKUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CKUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CKUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/CKUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,18 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ssss0722"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ssss0722&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/wFree1/SoftwareMetricsTool_Backend.git",
-    "accountId": "aedaa96c-6ab8-4c0f-8fe2-1ba000bfb34e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wFree1/SoftwareMetricsTool_Backend.git&quot;,
+    &quot;accountId&quot;: &quot;aedaa96c-6ab8-4c0f-8fe2-1ba000bfb34e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -153,32 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SmprojectApplication.executor": "Run",
-    "git-widget-placeholder": "v1.1",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/DeskTop/大三下/大三下复习资料/软件度量及应用/梁业靖-实验/backend/smproject",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SmprojectApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v1.1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DeskTop/大三下/大三下复习资料/软件度量及应用/梁业靖-实验/backend/smproject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="smproject" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="smproject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SmprojectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="smproject (1)" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.csu.smproject.SmprojectApplication" />
@@ -207,7 +95,8 @@
       <workItem from="1776236067802" duration="417000" />
       <workItem from="1776245139674" duration="16000" />
       <workItem from="1776245214831" duration="67000" />
-      <workItem from="1777110673314" duration="306000" />
+      <workItem from="1777110673314" duration="1401000" />
+      <workItem from="1777181913140" duration="7183000" />
     </task>
     <task id="LOCAL-00001" summary="cocomo&amp;flowGraph">
       <option name="closed" value="true" />
@@ -217,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777110919808</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cocomo&amp;flowGraph">
+      <option name="closed" value="true" />
+      <created>1777111051959</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777111051959</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

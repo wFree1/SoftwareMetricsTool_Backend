@@ -228,33 +228,35 @@ public class CKUtil {
             if(cls.getOwnedOperations() != null){
                 //对于每一个方法
                 for(OwnedOperation ownedOperation : cls.getOwnedOperations()){
-                    for(OwnedRule ownedRule : ownedOperation.getOwnedRules()){
-                        String code = ownedRule.getSpecification().getValue();
-                        //System.out.println(code);
+                    if (ownedOperation.getOwnedRules() != null) {
+                        for (OwnedRule ownedRule : ownedOperation.getOwnedRules()) {
+                            String code = ownedRule.getSpecification().getValue();
+                            //System.out.println(code);
 
-                        //要对这个code进行正则表达式的匹配，匹配的规则是：.* \.  (.*)
-                        //String text = "student.selectCourse() teacher.teachCourse()";
-                        String patternString1 ="([A-Za-z0-9]*\\.[A-Za-z0-9]*)";
-                        Pattern pattern = Pattern.compile(patternString1);
-                        Matcher matcher = pattern.matcher(code);
+                            //要对这个code进行正则表达式的匹配，匹配的规则是：.* \.  (.*)
+                            //String text = "student.selectCourse() teacher.teachCourse()";
+                            String patternString1 = "([A-Za-z0-9]*\\.[A-Za-z0-9]*)";
+                            Pattern pattern = Pattern.compile(patternString1);
+                            Matcher matcher = pattern.matcher(code);
 
-                        while(matcher.find()){
-                            //进行字符串的分割
-                            String caller = matcher.group(1).split("\\.")[0];
-                            String method = matcher.group(1).split("\\.")[1];
-                            //System.out.println("caller："+caller+" method："+method);
+                            while (matcher.find()) {
+                                //进行字符串的分割
+                                String caller = matcher.group(1).split("\\.")[0];
+                                String method = matcher.group(1).split("\\.")[1];
+                                //System.out.println("caller："+caller+" method："+method);
 
-                            //判断这个caller是属性还是类，我们只针对这两种情况，现在我没考虑类
-                            if(cls.getAttrMap().containsKey(caller)){//遍历所有的属性集合,查看这个caller是否是属性
-                                //包含这个属性
-                                //那么得到这个属性的类别
-                                String type = cls.getAttrMap().get(caller).getType();
-                                //在这个类的rfcMap中放入我们的这个id和属性名
-                                cls.getRfcMap().put(type+"____"+method,1);
+                                //判断这个caller是属性还是类，我们只针对这两种情况，现在我没考虑类
+                                if (cls.getAttrMap().containsKey(caller)) {//遍历所有的属性集合,查看这个caller是否是属性
+                                    //包含这个属性
+                                    //那么得到这个属性的类别
+                                    String type = cls.getAttrMap().get(caller).getType();
+                                    //在这个类的rfcMap中放入我们的这个id和属性名
+                                    cls.getRfcMap().put(type + "____" + method, 1);
 //                                for(String attrkey : cls.getRfcMap().keySet()){
 //                                    System.out.println("方法是："+attrkey);
 //                                }
-                                //System.out.println("Yes");
+                                    //System.out.println("Yes");
+                                }
                             }
                         }
                     }
@@ -286,29 +288,31 @@ public class CKUtil {
             if(cls.getOwnedOperations() != null){
                 //对于每一个方法
                 for(OwnedOperation ownedOperation : cls.getOwnedOperations()){
-                    for(OwnedRule ownedRule : ownedOperation.getOwnedRules()){
-                        //得到方法里面的代码
-                        String code = ownedRule.getSpecification().getValue();
-                        //System.out.println(code);
+                    if (ownedOperation.getOwnedRules() != null) {
+                        for (OwnedRule ownedRule : ownedOperation.getOwnedRules()) {
+                            //得到方法里面的代码
+                            String code = ownedRule.getSpecification().getValue();
+                            //System.out.println(code);
 
-                        //使用cls的每一个attribute去进行正则匹配code，如果匹配成功，那么将这个attribute加入到这个方法的属性集合中
-                        for(String attr : cls.getAttrMap().keySet()){
-                            if(code.indexOf(attr) > 0){
-                                //如果匹配成功，那么将这个属性加入到方法的属性集合中
-                                ownedOperation.getAttrSet().add(attr);
+                            //使用cls的每一个attribute去进行正则匹配code，如果匹配成功，那么将这个attribute加入到这个方法的属性集合中
+                            for (String attr : cls.getAttrMap().keySet()) {
+                                if (code.indexOf(attr) > 0) {
+                                    //如果匹配成功，那么将这个属性加入到方法的属性集合中
+                                    ownedOperation.getAttrSet().add(attr);
+                                }
+
                             }
-
                         }
-                    }
 
-                    if(ownedOperation.getAttrSet()!=null){
-                        //打印输出看一下结果
-                        //System.out.println("-----------------------------------------------------------------");
-                        //System.out.println("对于类："+key);
-                        //System.out.println("方法："+ownedOperation.getName()+"，它拥有的使用到的属性后一下：");
+                        if (ownedOperation.getAttrSet() != null) {
+                            //打印输出看一下结果
+                            //System.out.println("-----------------------------------------------------------------");
+                            //System.out.println("对于类："+key);
+                            //System.out.println("方法："+ownedOperation.getName()+"，它拥有的使用到的属性后一下：");
 //                        for(String attr : ownedOperation.getAttrSet()){
 //                            System.out.println(attr);
 //                        }
+                        }
                     }
                 }
 
