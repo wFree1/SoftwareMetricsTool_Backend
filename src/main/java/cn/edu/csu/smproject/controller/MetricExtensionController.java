@@ -5,6 +5,7 @@ import cn.edu.csu.smproject.domain.CocomoResult;
 import cn.edu.csu.smproject.domain.FlowGraphResult;
 import cn.edu.csu.smproject.service.AiAnalysisService;
 import cn.edu.csu.smproject.service.CocomoService;
+import cn.edu.csu.smproject.service.CodeMetricsAnalyzerService;
 import cn.edu.csu.smproject.service.FlowGraphService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +28,9 @@ public class MetricExtensionController {
 
     @Autowired
     private AiAnalysisService aiAnalysisService;
+
+    @Autowired
+    private CodeMetricsAnalyzerService metricsAnalyzerService;
 
     @PostMapping(value = "/cocomo/estimate")
     public ResponseEntity<Map<String, Object>> estimateCocomo(@RequestBody CocomoRequest request) {
@@ -113,30 +117,34 @@ public class MetricExtensionController {
         }
 
         try {
-            // 调用 Service 中新增的方法
+            // 1. 调用 AI 获取重构后的代码
             String refactoredCode = aiAnalysisService.refactorCode(badCode, issueType);
+
+            // 清理 Markdown 标记的代码保持不变...
+            if (refactoredCode.startsWith("```java")) { refactoredCode = refactoredCode.replaceFirst("```java\n?", ""); }
+            // ... (省略清理代码)
+            refactoredCode = refactoredCode.trim();
+
+            // 2. 【核心新增】：动态计算旧代码和新代码的指标
+            Map<String, Integer> oldMetrics = metricsAnalyzerService.analyzeCodeString(badCode);
+            Map<String, Integer> newMetrics = metricsAnalyzerService.analyzeCodeString(refactoredCode);
+
+            // 3. 组装最终返回数据
+            Map<String, Object> responseData = new HashMap<>();
+            responseData.put("codeStr", refactoredCode); // 注意我把新代码放在 codeStr 字段里了
+            responseData.put("oldMetrics", oldMetrics);
+            responseData.put("newMetrics", newMetrics);
 
             response.put("code", 200);
             response.put("message", "success");
-
-            // 容错处理：去除 Markdown 标记
-            if (refactoredCode.startsWith("```java")) {
-                refactoredCode = refactoredCode.replaceFirst("```java\n?", "");
-            } else if (refactoredCode.startsWith("```")) {
-                refactoredCode = refactoredCode.replaceFirst("```\n?", "");
-            }
-            if (refactoredCode.endsWith("```")) {
-                refactoredCode = refactoredCode.substring(0, refactoredCode.lastIndexOf("```"));
-            }
-
-            response.put("data", refactoredCode.trim());
+            response.put("data", responseData); // 返回复合对象
 
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
-            e.printStackTrace(); // 如果 AI 接口崩了，这里一定会打印红字
+            e.printStackTrace();
             response.put("code", 500);
-            response.put("message", "AI 核心服务调用失败：" + e.getMessage());
+            response.put("message", "AI 或语法分析服务调用失败：" + e.getMessage());
             return ResponseEntity.status(500).body(response);
         }
     }

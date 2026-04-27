@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd62ef47-c658-4f7a-9b50-0496bbc41c47" name="Changes" comment="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection">
+    <list default="true" id="cd62ef47-c658-4f7a-9b50-0496bbc41c47" name="Changes" comment="ai重构代码">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/CodeMetricsAnalyzerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/controller/MetricExtensionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/csu/smproject/service/AiAnalysisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/controller/MetricExtensionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/AiAnalysisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/csu/smproject/service/AiAnalysisService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +92,7 @@
       <workItem from="1777110673314" duration="1401000" />
       <workItem from="1777181913140" duration="7183000" />
       <workItem from="1777269834317" duration="3092000" />
+      <workItem from="1777289207124" duration="1246000" />
     </task>
     <task id="LOCAL-00001" summary="cocomo&amp;flowGraph">
       <option name="closed" value="true" />
@@ -117,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777269900742</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ai重构代码">
+      <option name="closed" value="true" />
+      <created>1777289337886</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777289337886</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cocomo&amp;flowGraph" />
     <MESSAGE value="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection" />
-    <option name="LAST_COMMIT_MESSAGE" value="cocomo&amp;flowGraph&amp;aiAnalyze&amp;cloneDetection" />
+    <MESSAGE value="ai重构代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="ai重构代码" />
   </component>
 </project>

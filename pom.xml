@@ -40,6 +40,12 @@
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-xml-provider</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.javaparser</groupId>
+            <artifactId>javaparser-core</artifactId>
+            <version>3.25.8</version>
+        </dependency>
     </dependencies>
 
     <build>
