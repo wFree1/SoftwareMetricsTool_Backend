@@ -1,3 +1,6 @@
+/**
+ * 代码克隆检测控制器，提供代码重复率检测功能
+ */
 package cn.edu.csu.smproject.controller;
 
 import org.springframework.http.ResponseEntity;
@@ -16,6 +19,8 @@ public class CloneDetectionController {
     /**
      * 多文件代码重复率检测接口
      * 采用 N-Gram 滑动窗口指纹算法 (N=3)
+     * @param files 上传的代码文件
+     * @return 代码重复率检测结果
      */
     @PostMapping("/detect")
     public ResponseEntity<Map<String, Object>> detectClones(@RequestParam("files") MultipartFile[] files) {
@@ -31,7 +36,7 @@ public class CloneDetectionController {
             int windowSize = 3; // 滑动窗口大小：连续 3 行代码作为一个比对指纹
             int totalNgrams = 0; // 总指纹数
 
-            // 【改动点 1】：把 Set 改成 List，这样不仅能跨文件查，还能查出同一个文件里多次复制粘贴的代码
+            // 把 Set 改成 List，这样不仅能跨文件查，还能查出同一个文件里多次复制粘贴的代码
             Map<String, List<String>> fingerprintMap = new HashMap<>();
 
             // 1. 遍历并解析所有上传的文件
@@ -39,14 +44,14 @@ public class CloneDetectionController {
                 String fileName = file.getOriginalFilename();
                 String content = new String(file.getBytes(), StandardCharsets.UTF_8);
 
-                // 【核心升级】：使用正则做工业级降噪
+                // 使用正则做工业级降噪
                 // 1. 抹除所有的多行注释 (/* ... */)
                 content = content.replaceAll("(?s)/\\*.*?\\*/", "");
                 // 2. 抹除所有的单行注释 (// ...)
                 content = content.replaceAll("//.*", "");
 
                 // 3. 按行分割并去除所有空白字符
-                String[] lines = content.split("\n");
+                String[] lines = content.split("\\n");
                 List<String> cleanLines = new ArrayList<>();
                 for (String line : lines) {
                     String cleanLine = line.replaceAll("\\s+", ""); // 彻底去空格
@@ -70,7 +75,7 @@ public class CloneDetectionController {
                 }
             }
 
-            // 3. 【改动点 2】：重写统计算法，采用工业级标准
+            // 3. 重写统计算法，采用工业级标准
             int duplicateInstances = 0; // 参与抄袭的代码块总频次
             int duplicateBlockCount = 0; // 发现的重复代码段数量
             Set<String> filesWithClones = new HashSet<>();

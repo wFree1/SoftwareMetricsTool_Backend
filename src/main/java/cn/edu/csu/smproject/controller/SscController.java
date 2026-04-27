@@ -1,5 +1,7 @@
+/**
+ * 软件度量工具控制器，提供各种软件度量指标的计算接口
+ */
 package cn.edu.csu.smproject.controller;
-
 
 import cn.edu.csu.smproject.service.*;
 import cn.edu.csu.smproject.domain.*;
@@ -22,74 +24,29 @@ public class SscController {
     @Autowired
     private HistoryService historyService;
 
+    /**
+     * 测试接口，用于验证XML格式的请求和响应
+     * @param ticketRequest 测试请求对象
+     * @return 测试响应对象
+     */
     @PostMapping(value = "/test", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
     public TicketResponse test(@RequestBody TicketRequest ticketRequest){
-        TicketResponse ticketResponse=new TicketResponse();
-        List<OrderResponse> orders=new ArrayList<OrderResponse>();
-        OrderResponse o=new OrderResponse();
+        TicketResponse ticketResponse = new TicketResponse();
+        List<OrderResponse> orders = new ArrayList<OrderResponse>();
+        OrderResponse o = new OrderResponse();
         o.setMsg("投注成功");
         orders.add(o);
         ticketResponse.setOrderList(orders);
         return ticketResponse;
     }
 
-//    @PostMapping(value = "/test2", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
-//    @ResponseBody
-//    public CKResponse test2(@RequestBody UMLXML model){
-//        Util.statClassAndInterface(model);
-//        Util.countOwnedOperations(model);
-//        Util.computeDepth(model);
-//        Util.computeCBO(model);
-//        //统计每个类的属性
-//        Util.statAttribute(model);
-//        Util.computeRFC(model);
-//        Util.computeLCOM(model);
-//
-//        for(int i=0;i<model.getPackagedElements().size();i++){
-//            //如果是我们的Class类型
-//            if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
-//                //String id = model.getPackagedElements().get(i).getId();
-//                System.out.println("对于类别："+model.getPackagedElements().get(i).getName()
-//                        +",wmc是："+model.getPackagedElements().get(i).getWmc()
-//                        +"，深度是："+ model.getPackagedElements().get(i).getDepth()
-//                        +",子类数量是："+model.getPackagedElements().get(i).getNoc()
-//                        +",CBO数量是："+model.getPackagedElements().get(i).getCbo()
-//                        +",RFC数量是："+model.getPackagedElements().get(i).getRfc()
-//                        +",LCOM数量是："+model.getPackagedElements().get(i).getLcom());
-//            }else if(model.getPackagedElements().get(i).getType().equals("uml:Interface")){
-//                System.out.println("对于接口："+model.getPackagedElements().get(i).getName()
-//                        +",wmc是："+model.getPackagedElements().get(i).getWmc()
-//                        +"，深度是："+ model.getPackagedElements().get(i).getDepth()
-//                        +",子类数量是："+model.getPackagedElements().get(i).getNoc()
-//                        +",CBO数量是："+model.getPackagedElements().get(i).getCbo()
-//                        +",RFC数量是："+model.getPackagedElements().get(i).getRfc()
-//                        +",LCOM数量是："+model.getPackagedElements().get(i).getLcom());
-//            }
-//        }
-//
-//        //基本的功能我们已经实现了，接下来我们来设计一下如何返回我们的xml文件
-//        CKResponse ckResponse = new CKResponse();
-//        List<CKResult> ckResults = new ArrayList<CKResult>();
-//        for(int i=0;i<model.getPackagedElements().size();i++){
-//            //如果是我们的Class类型
-//            if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
-//                //String id = model.getPackagedElements().get(i).getId();
-//                CKResult ckResult = new CKResult();
-//                ckResult.setName(model.getPackagedElements().get(i).getName());
-//                ckResult.setWmc(model.getPackagedElements().get(i).getWmc());
-//                ckResult.setDit(model.getPackagedElements().get(i).getDepth());
-//                ckResult.setNoc(model.getPackagedElements().get(i).getNoc());
-//                ckResult.setCbo(model.getPackagedElements().get(i).getCbo());
-//                ckResult.setRfc(model.getPackagedElements().get(i).getRfc());
-//                ckResult.setLcom(model.getPackagedElements().get(i).getLcom());
-//                ckResults.add(ckResult);
-//            }
-//        }
-//        ckResponse.setCkResultList(ckResults);
-//        return ckResponse;
-//    }
-
+    /**
+     * 计算CK度量指标
+     * @param model UML模型对象
+     * @param projectName 项目名称（可选）
+     * @return CK度量指标响应
+     */
     @PostMapping(value = "/CKMetrics", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
     public CKResponse CKMetrics(@RequestBody UMLXML model,
@@ -102,30 +59,10 @@ public class SscController {
         CKUtil.computeRFC(model);
         CKUtil.computeLCOM(model);
 
-        for(int i=0;i<model.getPackagedElements().size();i++){
-            if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
-                System.out.println("对于类别："+model.getPackagedElements().get(i).getName()
-                        +",wmc是："+model.getPackagedElements().get(i).getWmc()
-                        +"，深度是："+ model.getPackagedElements().get(i).getDepth()
-                        +",子类数量是："+model.getPackagedElements().get(i).getNoc()
-                        +",CBO数量是："+model.getPackagedElements().get(i).getCbo()
-                        +",RFC数量是："+model.getPackagedElements().get(i).getRfc()
-                        +",LCOM数量是："+model.getPackagedElements().get(i).getLcom());
-            }else if(model.getPackagedElements().get(i).getType().equals("uml:Interface")){
-                System.out.println("对于接口："+model.getPackagedElements().get(i).getName()
-                        +",wmc是："+model.getPackagedElements().get(i).getWmc()
-                        +"，深度是："+ model.getPackagedElements().get(i).getDepth()
-                        +",子类数量是："+model.getPackagedElements().get(i).getNoc()
-                        +",CBO数量是："+model.getPackagedElements().get(i).getCbo()
-                        +",RFC数量是："+model.getPackagedElements().get(i).getRfc()
-                        +",LCOM数量是："+model.getPackagedElements().get(i).getLcom());
-            }
-        }
-
         CKResponse ckResponse = new CKResponse();
         List<CKResult> ckResults = new ArrayList<CKResult>();
-        for(int i=0;i<model.getPackagedElements().size();i++){
-            if(model.getPackagedElements().get(i).getType().equals("uml:Class") || model.getPackagedElements().get(i).getType().equals("uml:Interface") ){
+        for(int i=0; i<model.getPackagedElements().size(); i++){
+            if(model.getPackagedElements().get(i).getType().equals("uml:Class") || model.getPackagedElements().get(i).getType().equals("uml:Interface")){
                 CKResult ckResult = new CKResult();
                 ckResult.setName(model.getPackagedElements().get(i).getName());
                 ckResult.setWmc(model.getPackagedElements().get(i).getWmc());
@@ -152,8 +89,12 @@ public class SscController {
         return ckResponse;
     }
 
-
-
+    /**
+     * 计算LK度量指标
+     * @param model UML模型对象
+     * @param projectName 项目名称（可选）
+     * @return LK度量指标响应
+     */
     @PostMapping(value = "/LKMetrics", consumes = { MediaType.APPLICATION_XML_VALUE }, produces = MediaType.APPLICATION_XML_VALUE)
     @ResponseBody
     public LKResponse LKMetrics(@RequestBody UMLXML model,
@@ -167,7 +108,7 @@ public class SscController {
 
         LKResponse lkResponse = new LKResponse();
         List<LKResult> lkResults = new ArrayList<LKResult>();
-        for(int i=0;i<model.getPackagedElements().size();i++){
+        for(int i=0; i<model.getPackagedElements().size(); i++){
             if(model.getPackagedElements().get(i).getType().equals("uml:Class")){
                 PackagedElement packagedElement = model.getPackagedElements().get(i);
                 LKResult lkResult = new LKResult();
@@ -195,6 +136,12 @@ public class SscController {
         return lkResponse;
     }
 
+    /**
+     * 计算VG度量指标
+     * @param model UML模型对象
+     * @param projectName 项目名称（可选）
+     * @return VG度量指标响应
+     */
     @PostMapping(value = "/VGMetrics", consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public Map<String, Object> VGMetrics(@RequestBody UMLXML model,
@@ -203,7 +150,6 @@ public class SscController {
         int vg = 0;
         VGUtil.computeVG(model);
         for(PackagedElement packagedElement : model.getPackagedElements()){
-            System.out.println(packagedElement.getVg());
             vg = packagedElement.getVg();
         }
         response.put("vg", vg);
@@ -219,6 +165,12 @@ public class SscController {
         return response;
     }
 
+    /**
+     * 代码行数统计
+     * @param files 上传的代码文件
+     * @param projectName 项目名称（可选）
+     * @return 代码统计结果
+     */
     @PostMapping(value = "/countCode")
     public Map<String, Object> countCode(@RequestParam("files") MultipartFile[] files,
                                         @RequestParam(required = false) String projectName){
@@ -240,6 +192,12 @@ public class SscController {
         return response;
     }
 
+    /**
+     * 计算UCP度量指标
+     * @param model UML模型对象
+     * @param projectName 项目名称（可选）
+     * @return UCP度量指标响应
+     */
     @PostMapping(value = "/UCPMetrics", consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public UCPResponse UCPMetrics(@RequestBody UMLXML model,
@@ -262,36 +220,28 @@ public class SscController {
         return ucpResponse;
     }
 
-    @PostMapping(value="/FPMetrics",consumes = { MediaType.APPLICATION_XML_VALUE })
+    /**
+     * 计算FP度量指标
+     * @param model DF模型对象
+     * @param projectName 项目名称（可选）
+     * @return FP度量指标响应
+     */
+    @PostMapping(value="/FPMetrics", consumes = { MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
     public FPResponse FPMetrics(@RequestBody DFXML model,
                                 @RequestParam(required = false) String projectName){
         FPResponse fpResponse = new FPResponse();
 
         ArrayList<Process> processArrayList = model.getRootObject().getChildren().getModel().getProcessArrayList();
-        for(Process process:processArrayList){
-            System.out.println(process.getName());
-        }
         fpResponse.setProcessArrayList(processArrayList);
 
         ArrayList<Flow> flowArrayList = model.getRootObject().getChildren().getModel().getFlowArrayList();
-        for(Flow flow:flowArrayList){
-            if(flow.getObject1().getProcess()!=null){
-                System.out.println(flow.getObject1().getProcess().getRef());
-            }
-        }
         fpResponse.setFlowArrayList(flowArrayList);
 
         ArrayList<OrganizationUnit> organizationUnitArrayList = model.getRootObject().getChildren().getModel().getOrganizationUnitArrayList();
-        for(OrganizationUnit organizationUnit:organizationUnitArrayList){
-            System.out.println(organizationUnit.getName());
-        }
         fpResponse.setOrganizationUnitArrayList(organizationUnitArrayList);
 
         ArrayList<Resource> resourceArrayList = model.getRootObject().getChildren().getModel().getResourceArrayList();
-        for(Resource resource:resourceArrayList){
-            System.out.println(resource.getName());
-        }
         fpResponse.setResourceArrayList(resourceArrayList);
 
         if(projectName != null && !projectName.isEmpty()){
